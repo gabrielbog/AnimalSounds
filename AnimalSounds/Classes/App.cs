@@ -4,11 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalSounds
+namespace AnimalSounds.Classes
 {
-    public class Debug
+    public class App
     {
-        public static List<Animal> getAnimalList()
+        private List<Animal> animalList;
+
+        public App()
+        {
+            animalList = GetAnimalList();
+        }
+
+        private List<Animal> GetAnimalList()
         {
             List<Animal> animals = new List<Animal>();
             animals.Add(new Canine());
@@ -16,13 +23,12 @@ namespace AnimalSounds
             animals.Add(new Feline());
             animals.Add(new Bird());
             animals.Add(new Bird());
-
             return animals;
         }
 
-        public static void printAnimalSounds(List<Animal> animals)
+        public void PrintAnimalSounds()
         {
-            foreach (Animal animal in animals)
+            foreach (Animal animal in animalList)
             {
                 Console.WriteLine(animal.GetType() + " makes sound: " + animal.GetSound());
             }

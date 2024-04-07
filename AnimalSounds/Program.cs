@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalSounds.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,8 @@ namespace AnimalSounds
     {
         static void Main(string[] args)
         {
-            List<Animal> animals = Debug.getAnimalList();
-            Debug.printAnimalSounds(animals);
+            App app = new App();
+            app.PrintAnimalSounds();
             Console.ReadKey();
         }
     }
