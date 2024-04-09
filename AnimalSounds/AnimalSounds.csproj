@@ -50,6 +50,7 @@
     <Compile Include="Classes\App.cs" />
     <Compile Include="Classes\Bird.cs" />
     <Compile Include="Classes\Canine.cs" />
+    <Compile Include="Classes\Data.cs" />
     <Compile Include="Classes\Feline.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

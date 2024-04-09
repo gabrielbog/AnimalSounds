@@ -8,26 +8,16 @@ namespace AnimalSounds.Classes
 {
     public class App
     {
-        private List<Animal> animalList;
+        private Data dataInstance;
 
         public App()
         {
-            animalList = GetAnimalList();
-        }
-
-        private List<Animal> GetAnimalList()
-        {
-            List<Animal> animals = new List<Animal>();
-            animals.Add(new Canine());
-            animals.Add(new Feline());
-            animals.Add(new Feline());
-            animals.Add(new Bird());
-            animals.Add(new Bird());
-            return animals;
+            dataInstance = Data.GetInstance();
         }
 
         public void PrintAnimalSounds()
         {
+            List<Animal> animalList = dataInstance.GetAllAnimals();
             foreach (Animal animal in animalList)
             {
                 Console.WriteLine(animal.GetType() + " makes sound: " + animal.GetSound());
